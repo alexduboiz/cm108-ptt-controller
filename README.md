@@ -36,3 +36,7 @@ or double-click `run.bat` (no console window).
 The CM108 GPIOs are set with a 5-byte HID output report:
 `[0x00, 0x00, output_bits, direction_bits, 0x00]`. GPIO3 is bit `0x04`.
 To use another pin, change `PTT_GPIO` in `cm108_ptt.py`.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
