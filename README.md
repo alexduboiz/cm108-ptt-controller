@@ -73,6 +73,13 @@ The CM108 GPIOs are set with a 5-byte HID output report:
 `[0x00, 0x00, output_bits, direction_bits, 0x00]`. GPIO3 is bit `0x04`.
 To use another pin, change `PTT_GPIO` in `cm108_ptt.py`.
 
+## Versions
+
+The current version is shown in the window title. See
+[CHANGELOG.md](CHANGELOG.md) for what changed in each version, and
+[Releases](https://github.com/alexduboiz/cm108-ptt-controller/releases) to
+download a specific version.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

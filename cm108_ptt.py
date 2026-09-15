@@ -24,6 +24,8 @@ from tkinter import ttk
 
 import hid
 
+__version__ = "1.0.0"
+
 CMEDIA_VID = 0x0D8C
 CMEDIA_PIDS = {0x0008, 0x000C, 0x000D, 0x000E, 0x0012, 0x0139, 0x013A, 0x013C}
 PTT_GPIO = 3
@@ -204,7 +206,7 @@ class PTTApp:
         self.vm_next_attach = 0.0
         self.vm_guard_until = 0.0
 
-        root.title("CM108 PTT")
+        root.title(f"CM108 PTT v{__version__}")
         root.geometry("440x540")
         root.minsize(320, 360)
         root.protocol("WM_DELETE_WINDOW", self.on_close)
