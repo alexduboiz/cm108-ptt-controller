@@ -4,6 +4,9 @@ A simple push-to-talk app for a radio interfaced through a C-Media CM108/CM119
 USB sound card, with the PTT circuit wired to **GPIO3**. Audio is handled
 separately (e.g. VoiceMeeter).
 
+Use your computer headset (or microphone and speakers) as your radio gear:
+listen to the radio and talk through it from your PC, with PTT on screen.
+
 ## Setup
 
 ```
