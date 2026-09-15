@@ -30,6 +30,39 @@ or double-click `run.bat` (no console window).
   To transmit again after a timeout, release and press PTT again.
 - PTT is always released when the window closes, the mode changes, or the
   device is changed.
+- Settings (toggle mode, timeout, VoiceMeeter link) are remembered in
+  `%APPDATA%\CM108 PTT\settings.json`.
+
+## VoiceMeeter link
+
+With **Link to VoiceMeeter** checked (the default), the app finds the
+VoiceMeeter input strip whose device is the CM108 (matched by name) and turns
+that strip's **Mute** button into a PTT button:
+
+- Mute the CM108 strip in VoiceMeeter → the radio transmits (and radio receive
+  audio is silenced while you talk). Unmute → back to receive.
+- The app's PTT button, Spacebar and TX timeout mute/unmute the strip in the
+  same way, so both always match.
+- When the link starts, the strip is unmuted so the radio never keys by
+  surprise.
+- It reconnects automatically if VoiceMeeter is started later or restarted.
+  Uncheck the option to use the app on its own.
+
+## Known limitations
+
+### Voicemeeter (Standard) — you hear yourself while transmitting
+
+The Standard Voicemeeter has only one hardware bus (**A**) besides the virtual
+bus, so the radio and your own audio cannot be routed separately:
+
+- Input 1 = CM108 (radio receive), Input 2 = your microphone
+- A1 = CM108 (radio mic input), A2 = your speakers
+- Both inputs must be routed to bus **A**
+
+Because A1 and A2 get the same mix, your microphone also reaches your
+speakers, so **you hear yourself while PTT is pressed**. Voicemeeter Banana
+and Potato have separate A1/A2/A3 buses, which lets you send the microphone
+to the CM108 only.
 
 ## How it works
 
